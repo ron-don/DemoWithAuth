@@ -1,0 +1,31 @@
+@page
+
+@using DemoWithAuth
+
+@model DemoModel
+
+@{
+    ViewData["Title"] = "Contact";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+<p>@Model.TitleTest</p>
+
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>EmailAddress</th>
+    <th>PhoneNumber</th>
+  </tr>
+  @foreach (var customer in Model.Customers)
+  {
+    <tr>
+      <td>@customer.Name</td>
+      <td>@customer.EmailAddress</td>
+      <td>@customer.PhoneNumber</td>
+    </tr>
+  }
+  </tr>
+</table>
